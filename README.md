@@ -18,4 +18,3 @@ Geliştirme sırasında önceki featurelar için yazılmış metotlar hızlı ş
 Ayrıca Headless koşum için gerekli geliştirme yapılmış olsa da test edilen websitesinin yapısından kaynaklı olarak elementler cssSelector ve xpath ile 
 alınmak durumunda kaldığı için css yüklemesi zorunlu olmuş ve tarayıcının açılması durumda kalınmıştır.
 
-Fırsat verdiğiniz için teşekkürler.
