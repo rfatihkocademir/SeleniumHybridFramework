@@ -18,4 +18,11 @@ Geliştirme sırasında önceki featurelar için yazılmış metotlar hızlı ş
 Ayrıca Headless koşum için gerekli geliştirme yapılmış olsa da test edilen websitesinin yapısından kaynaklı olarak elementler cssSelector ve xpath ile 
 alınmak durumunda kaldığı için css yüklemesi zorunlu olmuş ve tarayıcının açılması durumda kalınmıştır.
 
+*** Uygulamada kullanılmayan Classlar ***
+AbstractBase ile ProductPage classları projede kullanılmamıştır 
+yeterli vaktim olmadığı için bu kısımları daha sonra geliştirmeyi hedefliyorum.
+Mümkün olan en hızlı şekilde çalışır bir mimari sunmak için kısıtlı özellikler kullandım.
+
+
+
 Fırsat verdiğiniz için teşekkürler.
