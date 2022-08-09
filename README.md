@@ -26,3 +26,4 @@ Mümkün olan en hızlı şekilde çalışır bir mimari sunmak için kısıtlı
 
 
 Fırsat verdiğiniz için teşekkürler.
+
