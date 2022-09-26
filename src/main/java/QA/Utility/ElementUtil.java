@@ -14,19 +14,25 @@ public class ElementUtil {
     public ElementUtil(WebDriver driver) {
         this.driver = driver;
     }
-    public void WaitElementClickable(By Element){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(Element));
+
+
+    //selenium wait for element to be visible
+    public void waitForElementVisible(By by, int timeOutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
-    public void WaitElementVisibility(By Element){
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(Element));
+    //selenium wait for element to be clickable
+    public void waitForElementClickable(By element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+
+
     //Wait a minute
-    public void WaitAMinute(){
+    public void WaitForIt(int time) {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(time);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -36,8 +42,8 @@ public class ElementUtil {
     //Javascript Executor
 
     public JavascriptExecutor JSExecutor(){
-       JavascriptExecutor JS = (JavascriptExecutor)driver;
-       return JS;
+       JavascriptExecutor executor = (JavascriptExecutor)driver;
+       return executor;
 
     }
 

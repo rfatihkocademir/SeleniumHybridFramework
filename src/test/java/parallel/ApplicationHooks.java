@@ -37,7 +37,7 @@ public class ApplicationHooks {
     }
     @After(order=1)
     //teardown() method is used to take screenshot if is failed
-    public void teardown(Scenario scenario) {
+    public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
             //Take screenshot...
             String screenshotName = scenario.getName().replaceAll(" ", "_");

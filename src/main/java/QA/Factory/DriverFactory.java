@@ -8,7 +8,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
 
 import java.time.Duration;
 
@@ -24,8 +23,6 @@ public class DriverFactory {
                 ChromeOptions options = new ChromeOptions();
                 WebDriverManager.chromedriver().setup();
                 tlDriver.set(new ChromeDriver(options));
-
-                //tlDriver.set(new ChromeDriver());
                 break;
             }
             case "firefox": {
@@ -43,13 +40,14 @@ public class DriverFactory {
                 WebDriverManager.edgedriver().setup();
                 tlDriver.set(new EdgeDriver());
                 break;
+
             default:
                 System.out.println("Browser is not supported");
                 break;
         }
 
         getDriver().manage().deleteAllCookies();
-        getDriver().manage().window().maximize();
+        getDriver().manage().window().minimize();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         return getDriver();

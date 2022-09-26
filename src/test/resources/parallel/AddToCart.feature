@@ -1,5 +1,5 @@
 Feature: Satin Alma
- Scenario: Sepete urun ekleme senaryosu
+  Scenario: Sepete urun ekleme senaryosu
 
     Given Anasayfaya gidilir "https://www.lcwaikiki.com/tr-TR/TR"
     Then Sayfa basligi kontrol edilir "LC Waikiki"
@@ -13,6 +13,14 @@ Feature: Satin Alma
     And urun sayfasinda urunun fiyatinin goruntulendigi kontrol edilir
     And urun sayfasinda urunun resmini goruntulendigi kontrol edilir
     And urun sayfasinda urunun seceneklerinin goruntulendigi kontrol edilir
+    And urun sayfasında urunun aciklamasinin goruntulendigi kontrol edilir
+    And urun sayfasinda urunun renklerinin goruntulendigi kontrol edilir
+    And urun konbin yap butonunun goruntulendigi kontrol edilir
+    And urun benzer urunlerinin goruntule butonunun goruntulendigi kontrol edilir
+    And urun sayfasinda urunun degerlendirme butonunun goruntulendigi kontrol edilir
+    And urun sayfasinda konbin önerilerinin goruntulendigi kontrol edilir
+    And urun sayfasinda benzer ürünlerin goruntulendigi kontrol edilir
+    And urun sayfasında en cok satanların goruntulendigi kontrol edilir
     When Bir urun secenegi secilir
     When Sepete Ekle butonuna basilir
     When Sepetim butonuna tiklanir
@@ -21,4 +29,4 @@ Feature: Satin Alma
     And Sepet sayfasinda urunun fiyatinin goruntulendigi kontrol edilir
     And Sepet sayfasinda urunun resmini goruntulendigi kontrol edilir
     When Anasayfaya donulur
-    Then Anasayfa sayfasinin goruntulendigi kontrol edilir ""
+    Then Sayfa basligi kontrol edilir "LC Waikiki"
